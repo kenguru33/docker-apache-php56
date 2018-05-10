@@ -4,6 +4,6 @@ RUN apt-get --yes upgrade
 RUN apt-get --yes install software-properties-common python-software-properties
 RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --allow-unauthenticated php5.6 php5.6-mysql
+RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --allow-unauthenticated php5.6 php5.6-mysql php5.6-gd
 CMD apachectl -D FOREGROUND
 EXPOSE 80
